@@ -1,0 +1,37 @@
+# ============================================================
+#  File: pyproject.toml
+# ============================================================
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vanta"
+version = "1.0.0"
+description = "VANTA — Network Interception Suite // DEDSEC"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "DEDSEC"}]
+dependencies = [
+    "scapy>=2.5.0",
+    "colorama>=0.4.6",
+    "PySide6>=6.6.0",
+    "dnslib>=0.9.24",
+    "rich>=13.7.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "black>=24.0", "ruff>=0.3"]
+
+[project.scripts]
+vanta = "vanta.__main__:main"
+
+[tool.setuptools]
+packages = [
+    "vanta", "vanta.core", "vanta.attacks", "vanta.sniff",
+    "vanta.report", "vanta.cli", "vanta.gui", "vanta.gui.widgets",
+]
+
+[tool.setuptools.package-data]
+"vanta.gui" = ["*.qss"]

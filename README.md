@@ -135,7 +135,7 @@ VANTA auto-detects capability and refuses to launch DEAUTH if the card can't inj
 ## Install
 
 ```bash
-git clone https://github.com/<your-user>/vanta.git
+git clone https://github.com/Unknownx007/vanta
 cd vanta
 
 python3 -m venv venv
